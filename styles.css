@@ -33,7 +33,7 @@ h2 {
 }
 
 .link-icon {
-    width: 400px; /* 画像の幅を指定 */
+    width: 300px; /* 画像の幅を指定 */
     height: auto; /* 高さは自動で調整 */
     margin: 10px; /* 画像間のスペースを追加 */
     transition: transform 0.3s ease; /* ホバー時のアニメーション */
