@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>おかしら もっぷ</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">絵</a></li>
+                <li><a href="#links">外部リンク</a></li>
+                <li><a href="#projects">ご依頼</a></li>
+                <li><a href="#contact">連絡先</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="home">
+        <h1>▼絵▼</h1>
+        <p>オリジナル</p>
+        <div class="image-gallery">
+            <div class="image-container">
+                <img src="images/qwzk.png" alt="読み込み中" class="thumbnail">
+            </div>
+            <div class="image-container">
+                <img src="images/hj.png" alt="読み込み中" class="thumbnail">
+            </div>
+            <div class="image-container">
+                <img src="images/win.png" alt="読み込み中" class="thumbnail">
+            </div>
+            <div class="image-container">
+                <img src="images/夕.png" alt="読み込み中" class="thumbnail">
+            </div>
+        </div>
+        
+        <p>ファンアート</p>
+        <div class="image-gallery">
+            <div class="image-container">
+                <img src="images/メズマライザー.png" alt="読み込み中" class="thumbnail">
+            </div>
+            <div class="image-container">
+                <img src="images/summer.png" alt="読み込み中" class="thumbnail">
+            </div>
+            <div class="image-container">
+                <img src="images/琴葉.png" alt="読み込み中" class="thumbnail">
+            </div>
+            <div class="image-container">
+                <img src="images/葵.png" alt="読み込み中" class="thumbnail">
+            </div>
+            <div class="image-container">
+                <img src="images/超てんちゃん.png" alt="読み込み中" class="thumbnail">
+            </div>
+            <div class="image-container">
+                <img src="images/ame.png" alt="読み込み中" class="thumbnail">
+            </div>
+            <div class="image-container">
+                <img src="images/vs.png" alt="読み込み中" class="thumbnail">
+            </div>
+            <div class="image-container">
+                <img src="images/hd86.png" alt="読み込み中" class="thumbnail">
+            </div>
+        </div>
+    </section>
+    
+    <script>
+        // すべてのサムネイル画像にイベントを追加
+        const thumbnails = document.querySelectorAll('.thumbnail');
+        
+        thumbnails.forEach(thumbnail => {
+    thumbnail.addEventListener('click', function() {
+        if (!document.querySelector('.fullscreen')) {
+            const fullscreenDiv = document.createElement('div');
+            fullscreenDiv.classList.add('fullscreen');
+
+            const fullImage = document.createElement('img');
+            fullImage.src = this.src; // 元の画像のソースを直接使用
+            fullImage.alt = this.alt; // 元の画像のalt属性も保持
+            fullscreenDiv.appendChild(fullImage);
+            document.body.appendChild(fullscreenDiv);
+
+            fullscreenDiv.addEventListener('click', function() {
+                document.body.removeChild(fullscreenDiv);
+            });
+        }
+    });
+});
+
+    </script>
+
+<section id="links">
+    <h2>▼外部リンク▼</h2>
+    <a href="https://x.com/__mp40" target="_blank">
+        <img src="images/twitter main.png" alt="twitter メイン垢" class="link-icon">
+    </a>
+    <a href="https://x.com/02_nap" target="_blank">
+        <img src="images/twitter sub.png" alt="twitter サブ垢" class="link-icon">
+    </a>
+    <a href="https://www.youtube.com/@__mp40" target="_blank">
+        <img src="images/youtube.png" alt="youtube" class="link-icon">
+    </a>
+    <a href="https://www.tiktok.com/@__mp400" target="_blank">
+        <img src="images/tiktok.png" alt="tiktok" class="link-icon">
+    </a>
+    <a href="https://www.instagram.com/okashira_mop/" target="_blank">
+        <img src="images/instagram.png" alt="instagram" class="link-icon">
+    </a>
+    <a href="https://www.pixiv.net/users/27105384" target="_blank">
+        <img src="images/pixiv.png" alt="pixiv" class="link-icon">
+    </a>
+</section>
+<section id="projects">
+    <h2>▼ご依頼▼</h2>
+    <a href="https://skeb.jp/@__mp40" target="_blank">
+        <img src="images/skeb.png" alt="pixiv" class="link-icon">
+    </a>
+    <p>twitterのDMでもお受け付け可能です、お声掛けください。</p>
+    <p>その他SNSのDMでのご連絡はできません。</p>
+</section>
+<section id="contact">
+    <h2>▼連絡先▼</h2>
+    <p>mp40@ymail.ne.jp</p>
+    <p>こちらにどうぞ。</p>
+</section>
+</body>
+</html>
